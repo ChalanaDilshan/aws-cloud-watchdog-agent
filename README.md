@@ -1,13 +1,8 @@
-```bash
 #  AWS Cloud Security & Operations Watchdog
 
-[![AWS](https://img.shields.io/badge/AWS-EC2%20%7C%20Boto3%20%7C%20CLI-232F3E?logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![Google Gemini](https://img.shields.io/badge/AI-Gemini%202.5%20Flash-4285F4?logo=google&logoColor=white)](https://ai.google.dev/)
-[![Telegram](https://img.shields.io/badge/Telegram-Bot%20API-26A5E4?logo=telegram&logoColor=white)](https://telegram.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
-An autonomous, conversational Cloud SecOps Telegram assistant hosted on AWS EC2. It performs real-time infrastructure audits, monitors for security group drift (e.g., ports exposed to `0.0.0.0/0`), queries live AWS account telemetry via dynamic CLI execution and Boto3, and delivers clean, mobile-optimized cards with single-tap CLI remediation commands.
+An autonomous, conversational Cloud SecOps Telegram assistant hosted on AWS EC2. It performs real-time infrastructure audits, monitors
+for security group drift (e.g., ports exposed to `0.0.0.0/0`), queries live AWS account telemetry via dynamic CLI execution and Boto3, and
+delivers clean, mobile-optimized cards with single-tap CLI remediation commands.
 
 ---
 
@@ -87,6 +82,23 @@ aws-cloud-watchdog-agent/
 4. **Google AI Studio API Key:** Free API key from [aistudio.google.com](https://aistudio.google.com/).
 
 ---
+
+##  Live Telemetry & Audit Proof
+
+### 1. EC2 Runtime Engine & Dynamic Model Resolution
+The bot boots on EC2, dynamically scans Google's `ModelService` for active text-generation models (`gemini-2.5-flash`), and monitors user commands via the Telegram Bot API:
+
+![EC2 Terminal Runtime](assets/terminal-live-execution.png)
+
+---
+
+### 2. Live Telegram SecOps Auditing & Remediation
+Real-time resource evaluation, risk identification for open ingress CIDRs (`0.0.0.0/0`), and copy-paste remediation commands delivered directly to mobile:
+
+<p align="center">
+  <img src="assets/telegram-security-report.png" width="48%" alt="Security Report" />
+  <img src="assets/telegram-ec2-telemetry.png" width="48%" alt="EC2 Telemetry & Inspector" />
+</p>
 
 ##  Quickstart Guide
 
@@ -201,6 +213,7 @@ Attach the following policy to your EC2 Instance Role:
 ```
 
 ---
+
 
 ##  Sample In-Chat Interactions
 
