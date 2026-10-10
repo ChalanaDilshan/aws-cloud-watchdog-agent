@@ -229,15 +229,3 @@ Attach the following policy to your EC2 Instance Role:
 ##  License
 
 This project is licensed under the MIT License - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
-EOF
-
-```
-
-To commit and push the updated documentation to GitHub:
-
-```bash
-git add README.md
-git commit -m "docs: add comprehensive production-grade readme"
-git push origin main
-
-```
